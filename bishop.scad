@@ -1,0 +1,46 @@
+union(){
+    difference(){
+    //head
+    translate([0,0,10])
+    sphere(13.5);
+    translate([13,-5,13])
+    rotate([0,45,90])
+    cube([2,26,20]);
+    }
+      //knob
+    translate([0,0,32])
+    sphere(4);
+    
+    difference(){
+    translate([0,0,16])
+    cylinder(19,12.04,0);
+      //slice
+    translate([13,-5,13])
+    rotate([0,45,90])
+    cube([2,26,20]);
+    }
+//ring-1
+    scale([1,1,0.2])
+    translate([0,0,-8])
+    sphere(13);
+    //gap
+    translate([0,0,-10])
+    cylinder(10,10,10);
+    //ring-2
+    scale([1,1,0.2])
+    translate([0,0,-50])
+    sphere(13);
+//ring-3
+    scale([1,1,0.2])
+    translate([0,0,-65])
+    sphere(15);
+    //neck
+translate([0,0,-60])
+cylinder(60,15,10);
+//base-cone
+translate([0,0,-55])
+cylinder(10,20,15);
+//base-pedestal
+translate([0,0,-60])
+cylinder(7,20,20);
+}

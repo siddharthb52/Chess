@@ -1,0 +1,37 @@
+union(){
+    //cross
+      //vertical-bar
+    translate([0,0,23])
+    cube([3,3,20],center=true);
+      //horizontal-bar
+    translate([0,0,28.5])
+    cube([10,3,3],center=true);
+    //cross-ring
+    translate([0,0,17])
+    cylinder(5,10,10);
+    //head
+    cylinder(20,10,15);
+    //ring-1
+    scale([1,1,0.2])
+    translate([0,0,-8])
+    sphere(13);
+    //gap
+    translate([0,0,-10])
+    cylinder(10,10,10);
+    //ring-2
+    scale([1,1,0.2])
+    translate([0,0,-50])
+    sphere(13);
+    //neck
+    translate([0,0,-65])
+    cylinder(80,13,9);
+    //base-ring
+    translate([0,0,-65])
+    cylinder(7,17,17);
+    //base-support
+    translate([0,0,-70])
+    cylinder(10,20,15);
+    //base-pedestal
+    translate([0,0,-75])
+    cylinder(5,20,20);
+}

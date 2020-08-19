@@ -1,0 +1,29 @@
+union(){
+    difference(){
+    difference(){
+        //head
+    cylinder(15.5,13.5,15);
+        translate([0,0,3])
+        cylinder(13,13,13);
+    }
+    //nooks
+    translate([-3,12,10])
+    cube(6);
+    translate([-3,-15,10])
+    cube(6);
+    translate([-15,-3,10])
+    cube(6);
+    translate([12,-3,10])
+    cube(6);
+}
+//neck
+translate([0,0,-60])
+cylinder(60,15,10);
+//base-cone
+translate([0,0,-55])
+cylinder(10,20,15);
+//base-pedestal
+translate([0,0,-60])
+cylinder(7,20,20);
+}
+

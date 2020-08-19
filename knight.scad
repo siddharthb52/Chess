@@ -1,0 +1,152 @@
+union(){
+//head
+    difference(){
+    translate([0,-2.5,0])
+    cube([15,30,20],center=true);
+        //nose-block-out
+        translate([0,-15,12])
+        rotate([30,0,0])
+        cube([25,30,20],center=true);
+        //ear-block-outs
+          //main
+        translate([0,-10,11])
+        cube([25,30,10],center=true);
+          //side
+        rotate([20,0,0])
+        translate([0,0,8.25])
+        cube([25,30,5],center=true);
+        //black-block-out
+        rotate([-170,0,0])
+        translate([0,-14,26])
+        scale([1,0.4,1])
+        sphere(20);
+        //nostrils-block-outs
+         //left-nostril
+         translate([3,-13,-1])
+         rotate([0,90,0])
+         cylinder(10,1.5,1.5);
+         //right-nostril
+         translate([-3,-13,-1])
+         rotate([0,-90,0])
+         cylinder(10,1.5,1.5);
+        //mouth-block-out
+        translate([0,-25,-5])
+        cube([25,30,1.5],center=true);
+        //snout-bock-outs
+          //right-snout
+          rotate([0,0,15])
+          translate([-25,-23,-11])
+          cube([15,15,20]);
+          //left-snout
+          rotate([0,0,-15])
+          translate([10,-23,-11])
+          cube([15,15,20]);
+          
+    }
+    //eyes
+      //left-eye
+    scale([0.5,0.8,0.5])
+    translate([15,1,2])
+    sphere(3);
+      //right-eye
+    scale([0.5,0.8,0.5])
+    translate([-15,1,2])
+    sphere(3);
+    //reigns
+      //side-reigns
+         //left-reign
+    translate([7.5,-8,-3.5])
+    cube([1.5,1.5,13.5],center=true);
+         //right-reign
+    translate([-7.5,-8,-3.5])
+    cube([1.5,1.5,13.5],center=true);
+      //top-bottom-reigns
+         //top-reign
+    translate([0,-8,3])
+    cube([16,1.5,1.5],center=true);
+         //bottom-reign
+    translate([0,-8,-10])
+    cube([16,1.5,1.5],center=true);
+//workspace
+    
+      
+//
+//neck
+    //stomach-block-outs
+      //main
+    difference(){
+    translate([0,0,-24])
+    cube([15,25,30],center=true);
+        translate([0,-15,-13])
+        rotate([60,0,0])
+        cube([20,30,20,],center=true);
+      //side
+    translate([0,-15,-20])
+    rotate([80,0,0])
+    cube([20,30,10,],center=true);
+        //back-block-out
+        rotate([-170,0,0])
+        translate([0,-14,26])
+        scale([1,0.4,1])
+        sphere(20);
+        
+    }
+    //back-fringes
+        translate([0,12,5])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+    
+        translate([0,12,0])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+    
+        translate([0,12,-5])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+    
+        translate([0,11,-10])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+    
+        translate([0,10,-15])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+        
+        translate([0,10,-20])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+        
+        translate([0,11,-25])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+        
+        translate([0,11.8,-30])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+        
+        translate([0,12,-35])
+        scale([1,0.8,0.4])
+        rotate([0,90,0])
+        cylinder(15,3,3,center=true);
+//base-neck-connection
+    translate([0,0,-50])
+    cylinder(12,17,17);
+//base-cone
+ translate([0,0,-55])
+ cylinder(12,25,20);
+//base-ring
+ translate([0,0,-52])
+ scale([1,1,0.2])
+ sphere(26);
+//base-pedestal
+ translate([0,0,-65])
+ cylinder(10,20,20);
+}
