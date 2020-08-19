@@ -15,43 +15,29 @@ union(){
     }
     //nooks
       //cardinal nooks
-    translate([0,13,20])
-    sphere(4);
-    translate([0,-13,20])
-    sphere(4);
-    translate([13,0,20])
-    sphere(4);
-    translate([-13,0,20])
-    sphere(4);
+    for(x=[-13:26:13])
+    {
+        translate([x,0,20])
+        sphere(4);
+        translate([0,x,20])
+        sphere(4);
+    }
       //diagonal nooks
-    translate([9,9,20])
-    sphere(4);
-    translate([9,-9,20])
-    sphere(4);
-    translate([-9,9,20])
-    sphere(4);
-    translate([-9,-9,20])
-    sphere(4);
+    for(x=[-9:18:9])
+        for(y=[-9:18:9])
+            translate([x,y,20])
+            sphere(4);
 }
 //jewels
   //cardinal jewels
-    translate([5.5,13,21])
-    sphere(3);
-    translate([-5.5,-13,21])
-    sphere(3);
-    translate([13,-5.5,21])
-    sphere(3);
-    translate([-13,5.5,21])
-    sphere(3);
-  //diagonal jewels     
-    translate([13,5.5,21])
-    sphere(3);
-    translate([-13,-5.5,21])
-    sphere(3);
-    translate([-5.5,13,21])
-    sphere(3);
-    translate([5.5,-13,21])
-    sphere(3);
+    for(x=[-5.5:11:5.5])
+        for(y=[-13:26:13])
+        {
+            translate([x,y,21])
+            sphere(3);
+            translate([y,x,21])
+            sphere(3);
+        }
 //ring-1
     scale([1,1,0.2])
     translate([0,0,-8])
