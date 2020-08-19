@@ -1,0 +1,69 @@
+//$fn=100;
+union(){
+    //head
+    translate([0,0,15])
+    sphere(10);
+    translate([0,0,26])
+    sphere(4);
+    
+    difference(){
+    difference(){
+        //crown
+    cylinder(20,10,15);
+        translate([0,0,4])
+        cylinder(17,9,13);
+    }
+    //nooks
+      //cardinal nooks
+    for(x=[-13:26:13])
+    {
+        translate([x,0,20])
+        sphere(4);
+        translate([0,x,20])
+        sphere(4);
+    }
+      //diagonal nooks
+    for(x=[-9:18:9])
+        for(y=[-9:18:9])
+            translate([x,y,20])
+            sphere(4);
+}
+//jewels
+  //cardinal jewels
+    for(x=[-5.5:11:5.5])
+        for(y=[-13:26:13])
+        {
+            translate([x,y,21])
+            sphere(3);
+            translate([y,x,21])
+            sphere(3);
+        }
+//ring-1
+    scale([1,1,0.2])
+    translate([0,0,-8])
+    sphere(13);
+    //gap
+    translate([0,0,-10])
+    cylinder(10,10,10);
+    //ring-2
+    scale([1,1,0.2])
+    translate([0,0,-50])
+    sphere(13);
+//ring-3
+    scale([1,1,0.2])
+    translate([0,0,-65])
+    sphere(15);
+//neck
+    translate([0,0,-65])
+    cylinder(80,13,9);
+    //base-ring
+    translate([0,0,-65])
+    cylinder(7,17,17);
+    //base-support
+    translate([0,0,-70])
+    cylinder(10,20,15);
+    //base-pedestal
+    translate([0,0,-75])
+    cylinder(5,20,20);
+}
+//do inside of crown at end
