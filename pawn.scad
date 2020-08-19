@@ -1,0 +1,16 @@
+union(){
+    //head
+    sphere(7.5);
+    //ring
+    scale([1,1,0.2])
+    translate([0,0,-27.5])
+    sphere(7.5);
+    //neck
+    translate([0,0,-30])
+    cylinder(30,7,4.5);
+    scale([1,1,0.4])
+    translate([0,0,-73])
+    sphere(7.5);
+    translate([0,0,-33])
+    cylinder(3,8,8);
+    }
